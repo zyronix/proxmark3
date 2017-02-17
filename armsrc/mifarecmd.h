@@ -1,0 +1,29 @@
+//-----------------------------------------------------------------------------
+// Merlok - June 2011
+// Gerhard de Koning Gans - May 2008
+// Hagen Fritsch - June 2010
+//
+// This code is licensed to you under the terms of the GNU GPL, version 2 or,
+// at your option, any later version. See the LICENSE.txt file for the text of
+// the license.
+//-----------------------------------------------------------------------------
+// Routines to support ISO 14443 type A.
+//-----------------------------------------------------------------------------
+
+#ifndef __MIFARECMD_H
+#define __MIFARECMD_H
+
+#include "proxmark3.h"
+#include "apps.h"
+#include "util.h"
+#include "string.h"
+
+#include "iso14443crc.h"
+#include "iso14443a.h"
+#include "crapto1.h"
+#include "mifareutil.h"
+#include "common.h"
+
+extern int valid_nonce(uint32_t Nt, uint32_t NtEnc, uint32_t Ks1, uint8_t *parity);
+
+#endif
